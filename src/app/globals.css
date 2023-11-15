@@ -1,0 +1,66 @@
+.main-container {
+  margin: 0 auto;
+  max-width: 45rem;
+}
+
+.main-text{
+  width: fit-content;
+}
+
+.site-content{
+  
+}
+
+body {
+  margin: 0;
+  padding-inline: 1rem;
+  background-color: #fff;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+
+
+.header-text {
+  text-align: center;
+}
+
+.header-title {
+  font-size: 2.5rem;
+}
+
+.header-title a, .header-title a:visited {
+  text-decoration: none;
+  color:black;
+  text-transform: uppercase;
+}
+
+.header-navbar {
+  text-align: start;
+  
+  padding-block: 1.25rem;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+
+.header-navbar:after {
+  content: "";
+  display: block;
+  border-bottom: .125rem solid #5A5A5A;
+}
+
+.nav-list {
+  list-style: none;
+  display: inline;
+  padding: 0;
+  
+}
+
+.nav-item {
+  display:inline;
+  margin-right: 1rem;
+  text-transform: uppercase;
+}
