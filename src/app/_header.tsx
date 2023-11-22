@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const SiteHeader = () => {
     return (
         <>
@@ -8,10 +10,10 @@ const SiteHeader = () => {
             </div>
             <div id="navbar" className="header-navbar">
                 <ul id="navbar-list" className="nav-list">
-                    <li className="nav-item">Me</li>
-                    <li className="nav-item">Blog</li>
-                    <li className="nav-item">Games</li>
-                    <li className="nav-item">Now</li>
+                    <li className="nav-item"><Link href="/posts">Writing</Link></li>
+                    <li className="nav-item"><Link href="/library">Library</Link></li>
+                    <li className="nav-item"><Link href="/about">Me</Link></li>
+                    <li className="nav-item"><Link href="/now">Now</Link></li>
                 </ul>
             </div> 
         </>

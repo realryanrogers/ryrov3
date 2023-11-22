@@ -1,14 +1,17 @@
 ---
 type: "post"
 title: "Week 38 BrainDump"
-subtitle: "A third, older file"
+subtitle: A third, older file
+tags: 
+  - hello
+  - Again
 ---
 
 
 ### Inbox
 - Wedding Suit
 - Photographers Schedule
-- Wallypark Board Report
+- Wallypark Board Reports
 	- Get the reservations for the past year all together for the media visitors vs all customers
 - Members by city report
 - DDMO how is paid v non-paid running?
