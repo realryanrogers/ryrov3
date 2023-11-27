@@ -2,6 +2,7 @@
 type: "post"
 title: "Week 42 BrainDump"
 subtitle: "This is a test markdown file copied from obsidian"
+category: "Writing"
 date: "11/11/23"
 ---
 

@@ -2,6 +2,7 @@
 type: "post"
 title: "Week 41 BrainDump"
 subtitle: "A different markdown File"
+category: "Notes"
 ---
 
 

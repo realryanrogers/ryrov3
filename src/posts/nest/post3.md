@@ -1,9 +1,7 @@
 ---
 type: "post"
-title: "Week 38 BrainDump"
+title: "Week 33338 BrainDump"
 subtitle: A third, older file
-category: "Writing"
-date: "11/10/23"
 tags: 
   - hello
   - Again

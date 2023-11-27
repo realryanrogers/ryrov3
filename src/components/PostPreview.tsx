@@ -7,7 +7,7 @@ const PostPreview = (props: PostMetaData) => {
             <Link href={`posts/${props.slug}`} className="postPreview">
                 <h2>{props.title}</h2>
             </Link>
-            <p>{props.tags}</p>
+            <p>{props.date}</p>
                 
         </div>
     )

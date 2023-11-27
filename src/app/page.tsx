@@ -8,10 +8,13 @@ import PostPreview from '@/components/PostPreview';
 
 
 
+
 const HomePage = () => {
 
   const postMetaData = getPostMetaData();
-  const postPreviews = postMetaData.map((post) => (
+  const postPreviews = postMetaData.filter((post) => {
+    return post.category === "Notes" ? true : false
+  }).map((post) => (
     
     <PostPreview key={post.slug} {...post} />
     

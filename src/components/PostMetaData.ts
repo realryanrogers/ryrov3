@@ -4,5 +4,7 @@ export type PostMetaData = {
     subtitle: string;
     tags: string[];
     type: string;
+    category: string;
     slug: string;
 }
+
