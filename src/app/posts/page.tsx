@@ -4,7 +4,7 @@ import { aborted } from "util";
 
 const PostsPage = () => {
     const postMetaData = getPostMetaData();
-  const postPreviews = postMetaData.filter((post) => {
+    const postPreviews = postMetaData.filter((post) => {
     return post.category === "Writing" ? true : false
   }).sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime()

@@ -109,3 +109,51 @@ h1 {
     padding-top:1rem;
 }
 
+.notePreviewContainer{
+  margin-bottom: 5rem;
+  display:flex;
+}
+
+.notePreview h2 {
+  margin-top: 0;
+}
+
+.imageContainer{
+  height:min-content;
+  margin-right: 1rem;
+}
+
+.noteInfo{
+
+
+}
+
+.noteContainer {
+  display: flex;
+}
+
+.noteContainer h2 {
+  margin: 0;
+}
+
+.noteContent {
+  padding-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+hr {
+  border: .05rem solid #5A5A5A
+}
+
+.libraryHeader {
+  margin-bottom: 2rem;
+}
+
+.libraryHeader ul {
+  padding:0;
+  margin: 0;
+}
+
+.activeNav {
+  text-decoration: underline;
+}
