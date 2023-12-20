@@ -25,7 +25,7 @@ const starring = (e:string[]) =>{
     if(typeof e === 'undefined') {
         return ""
     } else {
-        return e.join(", ")
+        return e.join(", ").replace(/[\])}[{(]/g, '')
     }
 } 
 
@@ -36,7 +36,7 @@ const noteInfo = (post: matter.GrayMatterFile<string>) => {
                 <h2>{post.data.Title}</h2>
                 <small>{post.data.Released.getFullYear()}</small> | <small>Rating: {post.data.Rating}/10</small>
                 <p>
-                    Directed by: {post.data.Director}
+                    Directed by: {post.data.Director.replace(/[\])}[{(]/g, '')}
                 </p>
                 <p>
                     Starring: {starring(post.data.Starring)}
@@ -52,10 +52,10 @@ const noteInfo = (post: matter.GrayMatterFile<string>) => {
                 <h2>{post.data.Title}</h2>
                 <small>{post.data.Released.getFullYear()}</small> | <small>Rating: {post.data.Rating}/10</small>
                 <p>
-                    Developer: {post.data.Developer}
+                    Developer: {post.data.Developer.replace(/[\])}[{(]/g, '')}
                 </p>
                 <p>
-                    Publisher: {post.data.Publisher}
+                    Publisher: {post.data.Publisher.replace(/[\])}[{(]/g, '')}
                 </p>                  
                 <p>
                     {post.data.NoteSummary}
