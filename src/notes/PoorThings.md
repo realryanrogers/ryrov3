@@ -13,7 +13,7 @@ Starring:
   - Ramy Youssef
 Cinematography: Robbie Ryan
 CoverURL: https://www.themoviedb.org/t/p/w300_and_h450_bestv2/jG4o67eZKlvuL5R6WTysRkPwE75.jpg
-NoteSummary: A Frankenstein tale where everyone wants to bone the monster (and also the monster wants to bone them).
+NoteSummary: A Frankenstein tale where the monster is incredibly horny.
 ---
 ### Synopsis 
 A scientist puts the brain of a baby into the body of a grown woman, who sets off on an adventure to discover the world, herself, and how awesome sex is.
