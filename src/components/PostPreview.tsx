@@ -2,8 +2,6 @@ import Link from "next/link";
 import { PostMetaData } from "./PostMetaData";
 
 const PostPreview = (props: PostMetaData) => {
-    console.log("hell")
-    console.log(props.date)
     return (
         <div className="postPreviewContainer">
             <div>
@@ -12,7 +10,7 @@ const PostPreview = (props: PostMetaData) => {
                     <p className="standFirst">{props.standFirst}</p>
                 </Link>
                 <div className="postUnderline">
-                    <small>{`${props.date.getFullYear()}-${props.date.getMonth()}-${props.date.getDate()}`}</small>
+                    <small>{`${props.date.getFullYear()}-${props.date.getMonth() + 1}-${props.date.getDate() + 1}`}</small>
                     
                 </div>
             </div>

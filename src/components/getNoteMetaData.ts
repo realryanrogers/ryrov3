@@ -12,7 +12,6 @@ const getPostMetaData = (): NoteMetaData[] => {
     const posts = markdownPosts.map((fileName) => {
       const fileContents = fs.readFileSync(`${folder}${fileName}`, "utf8");
       const matterResult = matter(fileContents);
-      console.log(matterResult.data["Type"]);
       const firstConsumed = matterResult.data["Type"] == "Movie" ? matterResult.data["First Watched"] :  matterResult.data["FirstPlayed"]
         return {
           title: matterResult.data.Title,

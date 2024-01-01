@@ -11,11 +11,6 @@ const CategoryPage = (props: any) => {
     const activeParam = props.params.slug;
     const notePreviews = noteMetaData.filter((note) => {
       return note.type.toLowerCase() == props.params.slug.toLowerCase();
-      // console.log("---")
-      // console.log(note.type.toLowerCase())
-      // console.log(props.params.slug.toLowerCase())
-      // console.log(note.type.toLowerCase() == props.params.slug.toLowerCase())
-      // console.log("---")
     })
     .sort((a, b) => {
     return new Date(b.firstConsumed).getTime() - new Date(a.firstConsumed).getTime()
