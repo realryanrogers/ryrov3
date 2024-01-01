@@ -24,7 +24,7 @@ const PostPage = (props: any) => {
     const post = getPostContent(slug);
     return (
         <>
-            <h1>{post.data.title}</h1>
+            <h1>{post.data.title}</h1><small>{`${post.data.date.getFullYear()}-${post.data.date.getMonth() + 1}-${post.data.date.getDate()}`}</small>
             <Markdown>
                 {post.content}
             </Markdown>

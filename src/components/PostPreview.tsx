@@ -10,7 +10,7 @@ const PostPreview = (props: PostMetaData) => {
                     <p className="standFirst">{props.standFirst}</p>
                 </Link>
                 <div className="postUnderline">
-                    <small>{`${props.date.getFullYear()}-${props.date.getMonth() + 1}-${props.date.getDate() + 1}`}</small>
+                    <small>{`${props.date.getFullYear()}-${props.date.getMonth() + 1}-${props.date.getDate()}`}</small>
                     
                 </div>
             </div>
