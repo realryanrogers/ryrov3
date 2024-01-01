@@ -21,12 +21,12 @@ A scientist puts the brain of a baby into the body of a grown woman, who sets of
 ### Quick thoughts 
 The most surreal that Lanthimos has been, as well as his most experimental in terms of shooting. 
 
-This world feels fully realized. And I think it's making great use of the surreal by juxtaposing it against the familiar, to the point that this world ends up feeling like by the time the credits roll. Perhaps a good metaphor for coming of age into a world that appears quite absurd to those not already steeped in its rules. 
+This world feels fully realized. And I think it's making great use of the surreal by juxtaposing it against the familiar, to the point that this world ends up feeling like ours by the time the credits roll. Perhaps a good metaphor for coming of age into a world that appears quite absurd to those not already steeped in its rules. 
 
-Interesting ideas about liberation. Rather than just present liberation as something to be taken, it makes you investigate how the act of taking it can also be playing into the hands of others. 
+Interesting ideas about liberation. Rather than just present liberation as something to be taken, and wholly good, it makes you investigate how the act of taking it can also be playing into the hands of others. If you're not careful, you can liberate yourself right into another cage.
 
 Mark Ruffalo is eating everything in this movie. I've not laughed at a character just being a character like this in a long time. One of his best performances. Undoubtedly Emma Stone's best performance. She absolutely kills it with everything in every scene. And of course Willem Dafoe is great, but when is he not?
 
-On top of everything, it's also quite a touching film when it wants to be. The scene of Bella discovering the suffering and sadness in the world could have been a bit cheesy, but everyone nailed it and it really felt like learning just how awful the world can be for the first time. 
+On top of everything, it's also quite a touching film when it wants to be. The scene of Bella discovering the suffering and sadness of others could have been a bit cheesy, but everyone nailed it and it really felt like learning just how awful the world can be for the first time. 
 
 A late entry, but certainly in the running for best movie of the year for me. 

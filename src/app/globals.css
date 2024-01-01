@@ -44,24 +44,33 @@ h1 {
 }
 
 .header-navbar {
-  text-align: start;
-  
+  display:flex;
+  align-content: space-between;
   padding-block: 1.25rem;
   position: sticky;
   top: 0;
   background-color: rgb(16, 27, 41);
+  width: 100%;
+  flex-wrap: wrap;
 }
 
-.header-navbar:after {
-  content: "";
-  display: block;
+.header-navbar::after {
+  content:"";
   border-bottom: .125rem solid #5A5A5A;
+  flex-basis: 100%;
 }
+
+
 
 .nav-list {
   list-style: none;
-  display: inline;
   padding: 0;
+  display:flex
+}
+
+.navbar-right {
+  margin-left: auto;
+  margin-top: .75rem;
 }
 
 .nav-item {
@@ -70,13 +79,16 @@ h1 {
   text-transform: uppercase;
 }
 
+.nav-right {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
 .postPreview {
   color:white;
 }
 
-.postPreview:hover {
-  color:#528bd3;
-}
+
 
 .inlineDiv {
   margin-bottom: 1rem;
@@ -156,4 +168,57 @@ hr {
 
 .activeNav {
   text-decoration: underline;
+}
+
+.postPreviewContainer {
+  margin-bottom: 2rem;
+}
+
+.postPreview h2 {
+  margin-block: 0;
+}
+.postPreview p {
+  margin-top: .5rem;
+  margin-bottom: 0;
+}
+.postUnderline {
+  margin-top: .5rem;
+  color:#5A5A5A
+}
+
+.standFirst {
+  color:darkgray
+}
+
+
+
+
+.smIcon {
+  height: 1.5rem;
+}
+
+.frontPageList {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+p.frontPageList {
+  margin-top:1rem;
+}
+
+li.frontPageList {
+  margin-top: .15rem;
+}
+
+.seeAllLink {
+  margin-left: 1rem;
+  color:#5A5A5A
+}
+
+.listColumnContainer {
+  display:flex;
+}
+
+.blogPost a {
+  color:cornflowerblue;
 }

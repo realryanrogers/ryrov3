@@ -20,7 +20,9 @@ const getPostMetaData = (): PostMetaData[] => {
           tags: matterResult.data.tags,
           slug: fileName.replace(".md", ""),
           type: matterResult.data.type,
-          category: matterResult.data.category
+          category: matterResult.data.category,
+          published: matterResult.data.published,
+          standFirst: matterResult.data.standFirst,
         }     
     })
     

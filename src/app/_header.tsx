@@ -1,4 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+
 
 const SiteHeader = () => {
     return (
@@ -14,7 +18,13 @@ const SiteHeader = () => {
                     <li className="nav-item"><Link href="/library">Library</Link></li>
                     <li className="nav-item"><Link href="/about">Me</Link></li>
                     <li className="nav-item"><Link href="/now">Now</Link></li>
+                   
                 </ul>
+                <ul id="navbar-list-right" className="nav-list navbar-right">
+                    <li className="nav-item nav-right"><Link href="https://www.twitter.com/ryroio" target="_blank"><FontAwesomeIcon icon={faTwitter} className="smIcon"/></Link></li>
+                    <li className="nav-item nav-right"><Link href="mailto:ryan@ryro.io?subject=Hello!" target="_blank"><FontAwesomeIcon icon={faEnvelope} className="smIcon"/></Link></li>
+                </ul>
+
             </div> 
         </>
     )
