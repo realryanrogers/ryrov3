@@ -1,17 +1,18 @@
 
 import LibraryHeader from "@/components/LibraryHeader";
+import { NoteMetaData } from "@/components/NoteMetaData";
 import NotePreview from "@/components/NotePreview";
 
 import getNoteMetaData from "@/components/getNoteMetaData";
 
 
 
-const CategoryPage = (props: any) => {
+const GamesPage = (props: any) => {
     const noteMetaData = getNoteMetaData();
-    const activeParam = props.params.slug;
+    const activeParam = "game"
     const notePreviews = noteMetaData.filter((note) => {
-      return note.type.toLowerCase() == props.params.slug.toLowerCase();
-    })
+      return note.type.toLowerCase() == activeParam;
+    }) 
     .sort((a, b) => {
     return new Date(b.firstConsumed).getTime() - new Date(a.firstConsumed).getTime()
   }).map((note) => (
@@ -28,4 +29,4 @@ const CategoryPage = (props: any) => {
   )
 }
 
-export default CategoryPage;
+export default GamesPage;
