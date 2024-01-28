@@ -10,7 +10,7 @@ const nextConfig = {
           },
           {
             protocol: 'https',
-            hostname: 'www.themoviedb.org',
+            hostname: '*.themoviedb.org',
             port: '',
             pathname: '/t/**',
             
