@@ -4,17 +4,22 @@ import NotePreview from "@/components/NotePreview";
 
 import getNoteMetaData from "@/components/getNoteMetaData";
 
-
+export const generateStaticParams = async () => {
+  const noteMetaData = getNoteMetaData();
+  return noteMetaData.map((note) => ({
+      firstConsumed: note.firstConsumed,
+  }))
+}
 
 const CategoryPage = (props: any) => {
-    const noteMetaData = getNoteMetaData();
+    
     const activeParam = props.params.slug;
-    const notePreviews = noteMetaData.filter((note) => {
+    const notePreviews = props.params.filter((note: any) => {
       return note.type.toLowerCase() == props.params.slug.toLowerCase();
     })
-    .sort((a, b) => {
+    .sort((a: any, b: any) => {
     return new Date(b.firstConsumed).getTime() - new Date(a.firstConsumed).getTime()
-  }).map((note) => (
+  }).map((note: any) => (
     
     <NotePreview key={note.slug} {...note} />
     
