@@ -1,7 +1,7 @@
 ---
 Title: Godzilla Minus One
 Type: Movie
-Released: 2023-12-1
+Released: 2023-12-01
 First Watched: 2024-01-11
 Last Watched: 2024-01-11
 Rating: 9
