@@ -10,6 +10,7 @@ Completed: true
 Done: true
 Released: 2023-01-25
 FirstPlayed: 2023-02-03
+Published: 2023-12-20
 Developer: Tango Gameworks
 Publisher: Bethesda
 Platform: Gamepass

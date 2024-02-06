@@ -4,6 +4,7 @@ Type: Movie
 Released: 2023-04-14
 First Watched: 2024-01-23
 Last Watched: 2024-01-23
+Published: 2024-01-28
 Rating: 3
 Director: Chris McKay
 Starring:

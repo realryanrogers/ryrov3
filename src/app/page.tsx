@@ -15,7 +15,7 @@ const HomePage = () => {
   const postMetaData = getPostMetaData();
   const noteMetaData = getNoteMetaData();
     const notePreviews = noteMetaData.sort((a, b) => {
-    return new Date(b.firstConsumed).getTime() - new Date(a.firstConsumed).getTime()
+    return new Date(b.published).getTime() - new Date(a.published).getTime()
   }).slice(0,5).map((note) => (
     
     <li className="frontPageList" key={note.slug}><Link href={`library/${note.slug}`}>{note.title}</Link></li>

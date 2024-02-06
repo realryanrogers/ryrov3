@@ -17,6 +17,7 @@ const getPostMetaData = (): NoteMetaData[] => {
           title: matterResult.data.Title,
           firstConsumed: firstConsumed,
           released: matterResult.data.Released,
+          published: matterResult.data.Published,
           tags: matterResult.data.tags,
           slug: fileName.replace(".md", ""),
           type: matterResult.data.Type,

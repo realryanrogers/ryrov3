@@ -11,6 +11,7 @@ Completed: false
 Done: true
 Released: 2024-01-18
 FirstPlayed: 2024-01-18
+Published: 2024-02-05
 Developer: Snoozy Kazoo
 Publisher: Graffiti Games
 Platform: Gamepass

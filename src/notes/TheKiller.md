@@ -4,6 +4,7 @@ Title: The Killer
 Released: 2023-11-10
 First Watched: 2023-12-09
 Last Watched: 2023-12-09
+Published: 2023-12-09
 Rating: 7
 Director: David Fincher
 Starring:

@@ -12,6 +12,7 @@ Completed: false
 Done: false
 Released: 2023-10-23
 FirstPlayed: 2023-11-24
+Published: 2023-12-09
 Developer: Zeekerss
 Publisher: Zeekerss
 Platform: Steam

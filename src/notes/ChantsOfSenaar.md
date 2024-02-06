@@ -9,6 +9,7 @@ Completed: false
 Done: true
 Released: 2023-09-05
 FirstPlayed: 2023-09-22
+Published: 2023-12-26
 Developer: Rundisc
 Publisher: Focus Entertainment
 Platform: Steam

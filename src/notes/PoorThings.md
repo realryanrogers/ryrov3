@@ -4,6 +4,7 @@ Title: Poor Things
 Released: 2023-12-08
 First Watched: 2023-12-17
 Last Watched: 2023-12-17
+Published: 2023-12-26
 Rating: 10
 Director: Yorgos Lanthimos
 Starring:

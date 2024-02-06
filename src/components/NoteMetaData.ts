@@ -2,6 +2,7 @@ export type NoteMetaData = {
     title: string;
     firstConsumed: Date;
     released: Date;
+    published: Date;
     tags: string[];
     type: "Movie" | "Game" | "Show" | "Book";
     rating: string;

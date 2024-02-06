@@ -4,6 +4,7 @@ Type: Movie
 Released: 2023-12-01
 First Watched: 2024-01-11
 Last Watched: 2024-01-11
+Published: 2024-01-28
 Rating: 9
 Director: Takashi Yamazaki
 Starring:

@@ -4,6 +4,7 @@ Type: Movie
 Released: 2023-09-15
 First Watched: 2024-01-26
 Last Watched: 2024-01-26
+Published: 2024-01-28
 Rating: 5
 Director: Craig Gillespie
 Starring:

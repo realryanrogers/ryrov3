@@ -9,6 +9,7 @@ Completed: false
 Done: true
 Released: 2023-03-28
 FirstPlayed: 2023-03-28
+Published: 2023-12-19
 Developer: "[[Free Lives]]"
 Publisher: "[[Devolver Digital]]"
 Platform: Gamepass

@@ -14,7 +14,7 @@ const GamesPage = (props: any) => {
       return note.type.toLowerCase() == activeParam;
     }) 
     .sort((a, b) => {
-    return new Date(b.firstConsumed).getTime() - new Date(a.firstConsumed).getTime()
+    return new Date(b.published).getTime() - new Date(a.published).getTime()
   }).map((note) => (
     
     <NotePreview key={note.slug} {...note} />

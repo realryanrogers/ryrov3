@@ -4,6 +4,7 @@ Type: Movie
 Released: 2023-05-12
 First Watched: 2024-01-23
 Last Watched: 2024-01-23
+Published: 2024-01-28
 Rating: 8
 Director: Matt Johnson
 Starring:

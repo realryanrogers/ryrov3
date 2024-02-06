@@ -4,6 +4,7 @@ Type: Movie
 Released: 2024-02-02
 First Watched: 2024-02-01
 Last Watched: 2024-02-01
+Published: 2024-02-01
 Rating: 7
 Director: Matthew Vaughn
 Starring:

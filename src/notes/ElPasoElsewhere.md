@@ -10,6 +10,7 @@ Completed: true
 Done: false
 Released: 2023-09-26
 FirstPlayed: 2023-09-26
+Published: 2023-12-04
 Developer: Strange Scaffold
 Publisher: Strange Scaffold
 Platform: Steam

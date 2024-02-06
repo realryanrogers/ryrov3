@@ -4,6 +4,7 @@ Title: Saltburn
 Released: 2023-11-17
 First Watched: 2023-11-27
 Last Watched: 2023-11-27
+Published: 2023-11-28
 Rating: 7
 Director: Emerald Fennell
 Starring:
