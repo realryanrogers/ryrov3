@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const NotePreview = (props: NoteMetaData) => {
     return (
-        <Link href={`library/${props.slug}`}>
+        <Link href={`/library/${props.slug}`}>
             <div className="notePreviewContainer">
                 <div className="imageContainer">
                     <Image src={props.coverURL} alt="cover" width={100} height={130}/>
