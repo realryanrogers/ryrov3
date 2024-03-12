@@ -9,7 +9,7 @@ const NotePreview = (props: NoteMetaData) => {
         <Link href={`/library/${props.slug}`}>
             <div className="notePreviewContainer">
                 <div className="imageContainer">
-                    <Image src={props.coverURL} alt="cover" width={100} height={130}/>
+                    <Image src={props.coverURL} alt="cover" width={100} height={props.type == "Movie" ?  150 : 134}/>
                 </div>
                 <div className="noteInfo">
                     <div className="notePreview">

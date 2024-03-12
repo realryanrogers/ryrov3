@@ -74,7 +74,7 @@ const NotePage = (props: any) => {
         <>
             <div className="noteContainer">
                 <div className="imageContainer">
-                    <Image src={post.data.CoverURL} alt="cover" width={100} height={130}/>
+                    <Image src={post.data.CoverURL} alt="cover" width={100} height={post.data.Type == "Movie" ?  150 : 134}/>
                 </div>
                 {noteInfo(post)}
                   
