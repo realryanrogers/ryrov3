@@ -5,7 +5,7 @@ Released: 2024-02-02
 First Watched: 2024-02-01
 Last Watched: 2024-02-01
 Published: 2024-02-01
-Rating: 7
+Rating: 5
 Director: Matthew Vaughn
 Starring:
   - Bryce Dallas Howard
@@ -14,9 +14,9 @@ Starring:
   - Catherine O'Hara
 Cinematography: George Richmond
 CoverURL: https://media.themoviedb.org/t/p/w300_and_h450_bestv2/95VlSEfLMqeX36UVcHJuNlWEpwf.jpg
-NoteSummary: Definitely a 'style over substance' movie, but the style is pretty darn good.
+NoteSummary: Definitely a 'style over substance' movie, but the style is pretty good.
 ---
-When I first saw the trailer, I was excited. I'm a fan of Matthew Vaughn's styling (for the most part). The early critic reviews, however, did a lot to simmer me down. After seeing it, however, I'm very confident in saying this is being over hated. 
+When I first saw the trailer, I was excited. I'm a fan of Matthew Vaughn's styling (for the most part). The early critic reviews, however, did a lot to simmer me down. But, after seeing it I'm very confident in saying this is being over hated. 
 
 It's messy, and the story doesn't make the most sense, and some things get a little predictable. But, on the other hand, I think those negatives are something that helps the film be what it is. It's just a fun little spycraft action movie with some awesome set pieces. 
 
