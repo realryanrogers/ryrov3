@@ -8,7 +8,7 @@ const NowPage = () => {
             </div>
             <h3>Game Dev</h3>
             <p>
-                Currently working on an as-of-yet unannounced coop action rpg. 
+                Currently working on an as-of-yet unannounced coop space shooter. 
             </p>
             <h3>This Website</h3>
             <p>
@@ -20,7 +20,7 @@ const NowPage = () => {
                 To that end, I'm maintaining a collection of notes and writings here to help hone in on concepts and hopefully help other people learning as well.
             </p>
             <div className="updated">
-                Updated Nov 21st, 2023
+                Updated Oct 26th, 2024
             </div>
         </div>
     )
