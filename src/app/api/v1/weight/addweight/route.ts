@@ -6,7 +6,7 @@ export async function POST(request: Request){
     {
         const bod = await request.json()
         console.log(bod["token"])
-        if(bod["token"] != process.env.API_TOKEN) {
+        if(bod["token"] != process.env.NEXT_PUBLIC_API_TOKEN) {
             return new Response('Not Authorized')
         }
         if(bod["weight"] == null){
