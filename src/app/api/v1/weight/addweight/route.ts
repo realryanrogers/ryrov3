@@ -1,5 +1,7 @@
 import { PrismaClient, Prisma } from '@prisma/client'
-
+export async function GET(request: Request){
+    return Response.json({"Helle": "No"})
+}
 
 export async function POST(request: Request){
     try 
