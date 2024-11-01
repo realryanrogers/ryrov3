@@ -45,6 +45,7 @@ model SoloSession {
   TimeElapsed Int
   enhanced Boolean
   rating Int
+  notes String? @db.Text
 }
 
 model Poop {

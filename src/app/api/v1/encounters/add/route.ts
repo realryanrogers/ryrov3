@@ -19,7 +19,7 @@ export async function POST(request: Request){
             intensity: 1,
             strength: 2,
             activities: [],
-            positions: []
+            positions: [],
         }
 
 
@@ -80,7 +80,8 @@ export async function POST(request: Request){
                     TimeElapsed: encounterPacket.duration,
                     enhanced: encounterPacket.enhanced,
                     rating: encounterPacket.rating,
-                    finish: connectFinishId
+                    finish: connectFinishId,
+                    notes: bod["notes"]
                 }
                 
             })
