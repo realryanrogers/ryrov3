@@ -1,4 +1,5 @@
 import { Prisma, PrismaClient } from "@prisma/client"
+import type { EncounterActivities, EncounterPositions } from "@prisma/client"
 
 export async function POST(request: Request){
     try 
@@ -11,50 +12,55 @@ export async function POST(request: Request){
         }
         console.log("Creating Packets")
         //setup the stuff that applies to both
-        var encounterPacket = {
-            encounterDateTime: new Date(Date.now()),
-            duration: 10,
-            enhanced: false,
-            rating: 2,
-            intensity: 1,
-            strength: 2,
-            activities: [],
-            positions: [],
+        type EncounterPacket = {
+            party: number,
+            encounterDateTime: Date,
+            duration: number,
+            enhanced: boolean,
+            rating: number,
+            intensity: number,
+            strength: number,
+            activities: EncounterActivities[],
+            positions: EncounterPositions[]
         }
-
-
+        var encounterPacket = {} as EncounterPacket
         if(bod["datetime"] != null){
-            console.log(bod["DateTime"])
-            encounterPacket["encounterDateTime"] = new Date(bod["DateTime"])
-        }
-        if(bod["duration"] != null){
-            encounterPacket["duration"] = parseInt(bod["duration"])
-        } 
-        //set enhanced
-        if(bod["enhanced"] != null){
-            if(bod["enhanced"]==0){
-                encounterPacket["enhanced"] = false
-            } else {
-                encounterPacket["enhanced"] = true
-            } 
-        }
-        //set rating
-        if(bod["rating"] != null){
-            encounterPacket["rating"] = parseInt(bod["rating"])
+            console.log(bod["datetime"])
+            console.log(new Date(bod["datetime"]))
         }
 
-        if(bod["intensity"] != null){
-            encounterPacket["intensity"] = parseInt(bod["intensity"])
-        }
-
+        encounterPacket.party = bod["party"] != null ? parseInt(bod["party"]) : 1
+        encounterPacket.encounterDateTime = bod["datetime"] != null ? new Date(bod["datetime"]) : new Date(Date.now())
+        encounterPacket.duration = bod["duration"] != null ? parseInt(bod["duration"]) : 10
+        encounterPacket.enhanced = bod["enhanced"] != null ? Boolean(bod["enhanced"]) : false
+        encounterPacket.rating = bod["rating"] != null ? parseInt(bod["rating"]) : 2
+        encounterPacket.intensity = bod["intensity"] != null ? parseInt(bod["intensity"]) : 2
+        encounterPacket.intensity = bod["intensity"] != null ? parseInt(bod["intensity"]) : 2
         if(bod["activities"] != null){
-            encounterPacket["activities"] = JSON.parse(bod["activities"])
+            var ActivityJSON = JSON.parse(bod["activities"])
+            const prisma = new PrismaClient()
+            const actResult = await prisma.encounterActivities.findMany({
+                where: {
+                    id: { in: ActivityJSON}
+                }
+            })
+            encounterPacket.activities = actResult
+        } else {
+            encounterPacket.activities = []
         }
 
         if(bod["positions"] != null){
-            encounterPacket["positions"] = JSON.parse(bod["positions"])
+            var PositionJSON = JSON.parse(bod["positions"])
+            const prisma = new PrismaClient()
+            const posResult = await prisma.encounterPositions.findMany({
+                where: {
+                    id: { in: PositionJSON}
+                }
+            })
+            encounterPacket.positions = posResult
+        } else {
+            encounterPacket.positions = []
         }
-        
         const prisma = new PrismaClient()
         var finishId = undefined;
         if(bod["finish"] != null){
@@ -70,23 +76,24 @@ export async function POST(request: Request){
             finishId = finishResult.id
         }
         const connectFinishId = typeof finishId !== "undefined" ? { connect : { id: finishId }} : {}
-        if(parseInt(bod["party"]) == 2){
-            //set up the encounter
-        } else {
-            console.log("Creating Session")
-            const soloResult = await prisma.soloSession.create({
-                data: {
-                    datetime: encounterPacket.encounterDateTime,
-                    TimeElapsed: encounterPacket.duration,
-                    enhanced: encounterPacket.enhanced,
-                    rating: encounterPacket.rating,
-                    finish: connectFinishId,
-                    notes: bod["notes"]
-                }
-                
-            })
-            return Response.json(soloResult)
-        }
+        console.log("Creating Encounter")
+        const encounterResult = await prisma.encounter.create({
+            data: {
+                party: encounterPacket.party,
+                datetime: encounterPacket.encounterDateTime,
+                TimeElapsed: encounterPacket.duration,
+                enhanced: encounterPacket.enhanced,
+                rating: encounterPacket.rating,
+                intensity: encounterPacket.intensity,
+                activities: {connect: encounterPacket.activities},
+                positions: {connect: encounterPacket.positions},
+                finish: connectFinishId,
+                notes: bod["notes"]
+            }
+            
+        })
+        return Response.json(encounterResult)
+        
 
     } catch (error) {
         console.log(error)

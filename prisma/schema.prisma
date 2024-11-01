@@ -31,7 +31,6 @@ model Finish {
   id Int @id @default(autoincrement())
   finishLocationId Int
   location FinishLocation @relation(fields: [finishLocationId], references: [id])
-  soloSessions SoloSession?
   encounter Encounter? @relation(fields: [encounterid], references: [id])
   encounterid Int?
   rating Int
@@ -39,31 +38,29 @@ model Finish {
   strength Int
 }
 
-model SoloSession {
-  id Int @id @default(autoincrement())
-  finishId Int? @unique
-  finish Finish? @relation(fields: [finishId], references: [id])
-  datetime DateTime @db.DateTime
-  TimeElapsed Int
-  enhanced Boolean
-  rating Int
-  notes String? @db.Text
-}
-
 model Encounter {
   id Int @id @default(autoincrement())
   finishId Int? @unique
   finish Finish[] @relation()
   datetime DateTime @db.DateTime
+  party Int
   TimeElapsed Int
   enhanced Boolean
+  intensity Int
   rating Int
   notes String? @db.Text
-  activitiesId Int
   activities EncounterActivities[]
+  positions EncounterPositions[]
 }
 
 model EncounterActivities {
+  id Int @id @default(autoincrement())
+  code String @unique
+  name String
+  encounter Encounter[]
+}
+
+model EncounterPositions {
   id Int @id @default(autoincrement())
   code String @unique
   name String
