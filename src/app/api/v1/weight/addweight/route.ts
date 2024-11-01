@@ -29,7 +29,7 @@ export async function POST(request: Request){
         const result = await prisma.weighIn.create({
             data: {
                 weight: parseFloat(bod["weight"]),
-                date: encounterDateTime
+                date: encounterDateTime,
             }
         })
 

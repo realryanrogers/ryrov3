@@ -19,3 +19,30 @@ model WeighIn {
   date DateTime @db.Date @unique
   weight Float
 }
+
+model FinishLocation {
+  id Int @id @default(autoincrement())
+  code String @unique
+  name String 
+  finishes Finish[]
+}
+
+model Finish {
+  id Int @id @default(autoincrement())
+  finishLocationId Int
+  location FinishLocation @relation(fields: [finishLocationId], references: [id])
+  soloSessions SoloSession?
+  rating Int
+  volume Int
+  strength Int
+}
+
+model SoloSession {
+  id Int @id @default(autoincrement())
+  finishId Int? @unique
+  finish Finish? @relation(fields: [finishId], references: [id])
+  datetime DateTime @db.DateTime
+  TimeElapsed Int
+  enhanced Boolean
+  rating Int
+}
