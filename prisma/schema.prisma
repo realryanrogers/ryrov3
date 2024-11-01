@@ -46,3 +46,11 @@ model SoloSession {
   enhanced Boolean
   rating Int
 }
+
+model Poop {
+  id Int @id @default(autoincrement())
+  datetime DateTime @db.DateTime
+  volume Int
+  difficulty Int
+  hardness Int
+}
