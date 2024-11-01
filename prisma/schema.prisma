@@ -32,6 +32,8 @@ model Finish {
   finishLocationId Int
   location FinishLocation @relation(fields: [finishLocationId], references: [id])
   soloSessions SoloSession?
+  encounter Encounter? @relation(fields: [encounterid], references: [id])
+  encounterid Int?
   rating Int
   volume Int
   strength Int
@@ -46,6 +48,26 @@ model SoloSession {
   enhanced Boolean
   rating Int
   notes String? @db.Text
+}
+
+model Encounter {
+  id Int @id @default(autoincrement())
+  finishId Int? @unique
+  finish Finish[] @relation()
+  datetime DateTime @db.DateTime
+  TimeElapsed Int
+  enhanced Boolean
+  rating Int
+  notes String? @db.Text
+  activitiesId Int
+  activities EncounterActivities[]
+}
+
+model EncounterActivities {
+  id Int @id @default(autoincrement())
+  code String @unique
+  name String
+  encounter Encounter[]
 }
 
 model Poop {
