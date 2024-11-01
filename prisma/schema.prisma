@@ -40,7 +40,7 @@ model Finish {
 
 model Encounter {
   id Int @id @default(autoincrement())
-  finishId Int? @unique
+  finishId Int?
   finish Finish[] @relation()
   datetime DateTime @db.DateTime
   party Int
