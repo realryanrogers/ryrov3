@@ -6,7 +6,9 @@ export async function POST(request: Request){
     {
         console.log("in the try loo")
         const bod = await request.json()
-        console.log(bod["token"])
+        
+        console.log(bod["activities"])
+        console.log(bod)
         if(bod["token"] != process.env.NEXT_PUBLIC_API_TOKEN) {
             return new Response('Not Authorized')
         }
@@ -21,7 +23,8 @@ export async function POST(request: Request){
             intensity: number,
             strength: number,
             activities: EncounterActivities[],
-            positions: EncounterPositions[]
+            positions: EncounterPositions[],
+            finishId: number | null
         }
         var encounterPacket = {} as EncounterPacket
         if(bod["datetime"] != null){
@@ -37,11 +40,12 @@ export async function POST(request: Request){
         encounterPacket.intensity = bod["intensity"] != null ? parseInt(bod["intensity"]) : 2
         encounterPacket.intensity = bod["intensity"] != null ? parseInt(bod["intensity"]) : 2
         if(bod["activities"] != null){
-            var ActivityJSON = JSON.parse(bod["activities"])
+            
+            var numArr = bod["activities"].map((n:any) => parseInt(n))
             const prisma = new PrismaClient()
             const actResult = await prisma.encounterActivities.findMany({
                 where: {
-                    id: { in: ActivityJSON}
+                    id: { in: numArr}
                 }
             })
             encounterPacket.activities = actResult
@@ -50,11 +54,13 @@ export async function POST(request: Request){
         }
 
         if(bod["positions"] != null){
-            var PositionJSON = JSON.parse(bod["positions"])
+            
+            var numArr = bod["positions"].map((n:any) => parseInt(n))
+            bod["positions"].map
             const prisma = new PrismaClient()
             const posResult = await prisma.encounterPositions.findMany({
                 where: {
-                    id: { in: PositionJSON}
+                    id: { in: numArr}
                 }
             })
             encounterPacket.positions = posResult
@@ -76,6 +82,7 @@ export async function POST(request: Request){
             finishId = finishResult.id
         }
         const connectFinishId = typeof finishId !== "undefined" ? { connect : { id: finishId }} : {}
+        encounterPacket.finishId = typeof finishId == "number" ? finishId : null
         console.log("Creating Encounter")
         const encounterResult = await prisma.encounter.create({
             data: {
@@ -88,6 +95,7 @@ export async function POST(request: Request){
                 activities: {connect: encounterPacket.activities},
                 positions: {connect: encounterPacket.positions},
                 finish: connectFinishId,
+                finishId: encounterPacket.finishId,
                 notes: bod["notes"]
             }
             
