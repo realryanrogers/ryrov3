@@ -1,6 +1,10 @@
 
 import { PrismaClient, Prisma } from '@prisma/client'
 
+export async function GET(request: Request){
+    return new Response("ok")
+}
+
 export async function POST(request: Request){
     try 
     {
