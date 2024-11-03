@@ -24,7 +24,8 @@ export async function POST(request: Request){
             strength: number,
             activities: EncounterActivities[],
             positions: EncounterPositions[],
-            finishId: number | null
+            finishId: number | null,
+            partnerCompletes: number
         }
         var encounterPacket = {} as EncounterPacket
         if(bod["datetime"] != null){
@@ -39,6 +40,7 @@ export async function POST(request: Request){
         encounterPacket.rating = bod["rating"] != null ? parseInt(bod["rating"]) : 2
         encounterPacket.intensity = bod["intensity"] != null ? parseInt(bod["intensity"]) : 2
         encounterPacket.intensity = bod["intensity"] != null ? parseInt(bod["intensity"]) : 2
+        encounterPacket.partnerCompletes = bod["partnerCompletes"] != null ? parseInt(bod["partnerCompletes"]) : 2
         if(bod["activities"] != null){
             
             var numArr = bod["activities"].map((n:any) => parseInt(n))
@@ -96,6 +98,7 @@ export async function POST(request: Request){
                 positions: {connect: encounterPacket.positions},
                 finish: connectFinishId,
                 finishId: encounterPacket.finishId,
+                partnerCompletes: encounterPacket.partnerCompletes,
                 notes: bod["notes"]
             }
             
