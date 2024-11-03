@@ -42,6 +42,7 @@ model Encounter {
   id Int @id @default(autoincrement())
   finishId Int?
   finish Finish[] @relation()
+  partnerCompletes Int?
   datetime DateTime @db.DateTime
   party Int
   TimeElapsed Int
