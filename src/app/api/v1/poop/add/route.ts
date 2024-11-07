@@ -46,7 +46,7 @@ export async function POST(request: Request){
         return Response.json(poopResult)
         
     } catch (error) {
-        return new Response('Not Ok')
+        return new Response("Ok")
     }
     
 

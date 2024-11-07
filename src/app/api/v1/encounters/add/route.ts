@@ -40,7 +40,7 @@ export async function POST(request: Request){
         encounterPacket.rating = bod["rating"] != null ? parseInt(bod["rating"]) : 2
         encounterPacket.intensity = bod["intensity"] != null ? parseInt(bod["intensity"]) : 2
         encounterPacket.intensity = bod["intensity"] != null ? parseInt(bod["intensity"]) : 2
-        encounterPacket.partnerCompletes = bod["partnerCompletes"] != null ? parseInt(bod["partnerCompletes"]) : 2
+        encounterPacket.partnerCompletes = bod["partnerCompletes"] != null ? parseInt(bod["partnerCompletes"]) : 0
         if(bod["activities"] != null){
             
             var numArr = bod["activities"].map((n:any) => parseInt(n))
