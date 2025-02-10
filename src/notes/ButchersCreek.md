@@ -36,4 +36,4 @@ The Watcher, as a concept, is interesting, as well as the cult surrounding it. I
 
 **Spoilers Ended**
 
-Butcher's Creek is another extremely solid entry in the developer's gameography, alongside Squirrel Stapler, Chop Goblins, and Iron Lung. It doesn't quite reach the heights of Dusk, but I don't think that it's trying to. It's trying to deliver a brief but solid experience, and it very much succeeds in that. 
+Butcher's Creek is another extremely solid entry in the developer's ludography, alongside Squirrel Stapler, Chop Goblins, and Iron Lung. It doesn't quite reach the heights of Dusk, but I don't think that it's trying to. It's trying to deliver a brief but solid experience, and it very much succeeds in that. 
