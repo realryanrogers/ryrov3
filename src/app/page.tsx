@@ -12,7 +12,7 @@ import getNoteMetaData from '@/components/getNoteMetaData';
 
 
 const HomePage = () => {
-  const postMetaData = getPostMetaData();
+/*   const postMetaData = getPostMetaData();
   const noteMetaData = getNoteMetaData();
     const notePreviews = noteMetaData.sort((a, b) => {
     return new Date(b.published).getTime() - new Date(a.published).getTime()
@@ -48,7 +48,7 @@ const HomePage = () => {
         <Link href="library" className="seeAllLink">{`See All ->`}</Link>
       </div>
     </div>
-  )
+  ) */
 }
 
 export default HomePage;
