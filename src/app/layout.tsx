@@ -22,7 +22,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
       <div id="main-container" className="main-container">
-        <SiteHeader/>
+        {/* <SiteHeader/> */}
         <div id="content" className="site-content">
             {children}   
         </div>
